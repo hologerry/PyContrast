@@ -206,21 +206,28 @@ class ResNet(nn.Module):
 
         return nn.Sequential(*layers)
 
-    def forward(self, x):
+    def forward(self, x, return_feat=False):
         x = self.conv1(x)
         x = self.bn1(x)
         x = self.relu(x)
         x = self.maxpool(x)
 
+        outs = []
         x = self.layer1(x)
+        outs.append(x)
         x = self.layer2(x)
+        outs.append(x)
         x = self.layer3(x)
+        outs.append(x)
         x = self.layer4(x)
-
+        outs.append(x)
         x = self.avgpool(x)
         x = torch.flatten(x, 1)
 
-        return x
+        if return_feat:
+            return x, tuple(outs)
+        else:
+            return x
 
 
 def _resnet(arch, block, layers, pretrained, progress, **kwargs):

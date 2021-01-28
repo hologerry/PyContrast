@@ -26,7 +26,7 @@ You can set up the environments in your own way (`requirements.txt` has been pro
 4. (Optional) install [apex](https://github.com/NVIDIA/apex) if you would like to 
 try mixed precision training. If you do not want to take a look at the 
 [apex](https://github.com/NVIDIA/apex) repo, the installing commands are (assuming pytorch 
-and CUDA are availabel):
+and CUDA are available):
     ```
     cd ~
     git clone https://github.com/NVIDIA/apex

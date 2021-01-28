@@ -1,4 +1,4 @@
-### Data prepartion
+### Data preparation
 Download the ImageNet dataset from http://www.image-net.org/, 
 and move validation images into subfolders using this 
 [shell script](https://raw.githubusercontent.com/soumith/imagenetloader.torch/master/valprep.sh).

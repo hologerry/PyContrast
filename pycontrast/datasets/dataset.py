@@ -36,6 +36,7 @@ class ImageFolderInstance(datasets.ImageFolder):
             img = image
 
         # # jigsaw
+        jigsaw_image = None
         if self.use_jigsaw:
             jigsaw_image = self.jigsaw_transform(image)
 
